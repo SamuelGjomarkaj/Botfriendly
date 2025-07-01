@@ -109,7 +109,10 @@ body {
 }
 
 /* Responsive for small screens (optional) */
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
+    .navbar{
+        margin-left: 0px;
+    }
     .nav-container {
         flex-direction: column;
         height: auto;
