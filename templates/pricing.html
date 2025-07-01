@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pricing – BotFriendly</title>
+    <link rel="stylesheet" href="pricing.css" />
+    <link rel="stylesheet" href="bot.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bot.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pricing.css') }}" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+<main class="pricing-container">
+    <header class="pricing-header">
+        <h1>Fair Pricing for Every Business</h1>
+        <p>No hidden fees. Scale your support as you grow — while keeping your costs predictable.</p>
+    </header>
+
+    <section class="pricing-grid">
+        <div class="plan-card">
+            <h2>Starter</h2>
+            <p class="price">$29<span>/mo</span></p>
+            <ul>
+                <li><i class="fas fa-robot"></i> Basic AI Chatbot</li>
+                <li><i class="fas fa-comment-dots"></i> 1,000 Conversations</li>
+                <li><i class="fas fa-envelope"></i> Email Support</li>
+            </ul>
+            <a href="{{ url_for('order') }}?plan=Standart" class="btn">Start now</a>
+        </div>
+
+        <div class="plan-card popular">
+            <div class="tag">Most Popular</div>
+            <h2>Pro</h2>
+            <p class="price">$79<span>/mo</span></p>
+            <ul>
+                <li><i class="fas fa-robot"></i> Advanced AI Chatbot</li>
+                <li><i class="fas fa-comment"></i> 10,000 Conversations</li>
+                <li><i class="fas fa-link"></i> CRM + API Integration</li>
+                <li><i class="fas fa-headset"></i> Priority Email Support</li>
+            </ul>
+            <a href="{{ url_for('order') }}?plan=Pro" class="choose-btn">Choose Pro</a>
+
+        </div>
+
+        <div class="plan-card">
+            <h2>Enterprise</h2>
+            <p class="price">Custom</p>
+            <ul>
+                <li><i class="fas fa-user-gear"></i> Full AI Agent Suite</li>
+                <li><i class="fas fa-handshake"></i> Dedicated Success Manager</li>
+                <li><i class="fas fa-code"></i> Full API Access</li>
+                <li><i class="fas fa-building"></i> Custom Workflows</li>
+            </ul>
+           <a href="{{ url_for('order') }}?plan=Enterprise" class="choose-btn">Customise</a>
+        </div>
+    </section>
+
+    <section class="pricing-note">
+        <p><strong>All plans include</strong> setup assistance, chatbot training, and free updates. You can upgrade or cancel anytime.</p>
+    </section>
+
+    <footer class="pricing-footer">
+        <p>&copy; 2025 BotFriendly. Supporting the future of customer service.</p>
+    </footer>
+
+    <div id="chat-bubble">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 18H22V6H2V18H8L12 22Z"/>
+            <path d="M9 10H15"/>
+            <path d="M9 14H13"/>
+        </svg>
+    </div>
+
+
+    <!-- Chat Popup -->
+    <div id="chat-popup">
+        <div class="chat-header">
+            <span>BotFriendly Chat</span>
+            <button id="close-chat">&times;</button>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="bot-msg">Hi there! 👋<br>Ask me anything.</div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="chat-input" placeholder="Type a message..." />
+            <button id="send-btn">➤</button>
+        </div>
+    </div>
+    <script src="bot.js"></script>
+    <script src="{{ url_for('static', filename='js/bot.js') }}"></script>
+</main>
+</body>
+</html>

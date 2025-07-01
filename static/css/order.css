@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: linear-gradient(to right, #cbdcf3, #e6f1ff);
+    color: #1a1a1a;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.form-wrapper {
+    max-width: 600px;
+    width: 100%;
+}
+
+.form-card {
+    backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.form-card:hover {
+    transform: translateY(-4px);
+}
+
+.gradient-sync {
+    background: linear-gradient(270deg, #007cf0, #00c6ff, #ff3c3c, #007cf0);
+    background-size: 300% 300%;
+    background-position: 0% 50%;
+    transition: background-position 1.2s ease;
+}
+
+/* Heading gradient */
+h1.gradient-sync {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Info */
+#plan-info {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Form fields */
+label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+    margin-top: 16px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 14px 16px;
+    margin-top: 4px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background: #fff;
+    box-sizing: border-box;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #007cf0;
+    box-shadow: 0 0 0 3px rgba(0, 124, 240, 0.1);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Button */
+button.gradient-sync {
+    margin-top: 30px;
+    width: 100%;
+    padding: 14px 24px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background-clip: border-box;
+    background-size: 300% 300%;
+    background-position: 0% 50%;
+    transition: background-position 1.2s ease, transform 0.2s ease;
+}
+
+button.gradient-sync:hover {
+    transform: scale(1.03);
+}

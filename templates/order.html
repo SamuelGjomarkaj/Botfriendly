@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Complete Your Plan – BotFriendly</title>
+  <link rel="stylesheet" href="order.css" />
+  <link  rel="stylesheet" href="bot.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bot.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/order.css') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+<main class="form-wrapper">
+  <section class="form-card">
+    <h1 id="animated-title" class="gradient-sync">Complete Your Plan</h1>
+    <p id="plan-info">Selected Plan: <span id="selected-plan">Loading...</span></p>
+
+    <form action="/send" method="POST" enctype="multipart/form-data">
+      <input type="hidden" id="plan-hidden" name="plan" value="">
+
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Company Name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+      <label for="comment">Comment</label>
+      <textarea id="comment" name="message" rows="4" placeholder="Write a message..."></textarea>
+
+      <button type="submit" id="submit-btn" class="gradient-sync">Submit Request</button>
+    </form>
+  </section>
+</main>
+<div id="chat-bubble">
+  <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+       stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 18H22V6H2V18H8L12 22Z"/>
+    <path d="M9 10H15"/>
+    <path d="M9 14H13"/>
+  </svg>
+</div>
+
+
+<!-- Chat Popup -->
+<div id="chat-popup">
+  <div class="chat-header">
+    <span>BotFriendly Chat</span>
+    <button id="close-chat">&times;</button>
+  </div>
+  <div class="chat-body" id="chat-body">
+    <div class="bot-msg">Hi there! 👋<br>Ask me anything.</div>
+  </div>
+  <div class="chat-footer">
+    <input type="text" id="chat-input" placeholder="Type a message..." />
+    <button id="send-btn">➤</button>
+  </div>
+</div>
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const plan = urlParams.get("plan") || "Not selected";
+  document.getElementById("selected-plan").textContent = plan;
+  document.getElementById("plan-hidden").value = plan;
+  const button = document.getElementById("submit-btn");
+  const title = document.getElementById("animated-title");
+
+  // Move gradient to the right
+  button.addEventListener("mouseenter", () => {
+    button.style.backgroundPosition = "100% 50%";
+    title.style.backgroundPosition = "100% 50%";
+  });
+
+  // Smoothly return to start
+  button.addEventListener("mouseleave", () => {
+    button.style.backgroundPosition = "0% 50%";
+    title.style.backgroundPosition = "0% 50%";
+  });
+
+  // Handle selected plan as before
+
+</script>
+<script src="bot.js"></script>
+<script src="{{ url_for('static', filename='js/bot.js') }}"></script>
+</body>
+</html>

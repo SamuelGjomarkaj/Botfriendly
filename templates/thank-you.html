@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thank You – BotFriendly</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="thank-you.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/thank-you.css') }}" />
+</head>
+<body>
+<main class="thank-you-wrapper">
+    <div class="thank-you-card">
+        <h1>🎉 You're All Set!</h1>
+        <p>If the details you provided are correct,<br> you'll receive an email soon with everything you need to get started.</p>
+        <a href="{{ url_for('services') }}" class="back-button">← Back to Home</a>
+    </div>
+</main>
+</body>
+</html>

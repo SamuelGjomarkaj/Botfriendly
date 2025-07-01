@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Services – BotFriendly</title>
+    <link rel="stylesheet" href="services.css" />
+    <link rel="stylesheet" href="bot.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bot.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+<main class="container">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="BotFriendly Logo" />
+                <span>BotFriendly</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('pricing') }}">Pricing</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+
+
+    <header class="page-header">
+        <h1>BOTFRIENDLY SERVICES</h1>
+        <p>Futuristic AI solutions that revolutionize your customer support.</p>
+    </header>
+    <section class="cta-section" id="cta">
+        <div class="cta-box">
+            <h2>Upgrade your support now</h2>
+            <p>Automate your support and delight your customers with AI.</p>
+            <a href="{{ url_for('pricing') }}" class="cta-button" id="cta-btn"><span class="btn-text">View Plans</span></a>
+        </div>
+    </section>
+    <section class="features-section">
+        <h2 class="section-title">What We Offer</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h3>AI Chatbots</h3>
+                <p>Deploy intelligent chatbots trained on your business data to answer questions, take orders, or qualify leads 24/7.</p>
+                <span class="feature-tag">Instant Replies</span>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">⚙️</div>
+                <h3>Automation Agents</h3>
+                <p>Automate workflows like ticketing, follow-ups, and internal routing with AI-driven agents trained to act like staff.</p>
+                <span class="feature-tag">Workflow Automation</span>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔌</div>
+                <h3>Integrations</h3>
+                <p>Connect your bot to Slack, Discord, CRM systems, custom APIs and much more using our simple plug-in tools.</p>
+                <span class="feature-tag">API Ready</span>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <h3>Analytics & Reporting</h3>
+                <p>Track engagement, performance, and conversions using clear dashboards and data-rich insights.</p>
+                <span class="feature-tag">Insights & KPIs</span>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="page-footer" id="contact">
+        <p>&copy; 2025 BotFriendly | Crafted for the future of support.</p>
+    </footer>
+    <div id="chat-bubble">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 18H22V6H2V18H8L12 22Z"/>
+            <path d="M9 10H15"/>
+            <path d="M9 14H13"/>
+        </svg>
+    </div>
+
+
+    <!-- Chat Popup -->
+    <div id="chat-popup">
+        <div class="chat-header">
+            <span>BotFriendly Chat</span>
+            <button id="close-chat">&times;</button>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="bot-msg">Hi there! 👋<br>Ask me anything.</div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="chat-input" placeholder="Type a message..." />
+            <button id="send-btn">➤</button>
+        </div>
+    </div>
+<script src="script.js"></script>
+    <script src="bot.js"></script>
+    <script src="{{ url_for('static', filename='js/bot.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</main>
+</body>
+</html>
