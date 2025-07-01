@@ -1,0 +1,88 @@
+Company Name: BotFriendly
+
+About Us:
+BotFriendly is a cutting-edge AI company specializing in building custom AI chatbots and customer support automation solutions for businesses of all sizes. Our mission is to help companies save money and improve customer experience by leveraging smart AI technology.
+
+Services:
+- AI Chatbots that understand and respond instantly to customer queries.
+- Automation Agents that handle complex workflows seamlessly.
+- System Integration with CRM, APIs, and other tools.
+- Analytics & Insights for real-time monitoring of customer engagement.
+
+Mission:
+To revolutionize customer support with affordable, intelligent AI solutions that increase efficiency and customer satisfaction.
+
+Contact Information:
+Email: support@botfriendly.com
+Website: https://botfriendly.com
+Phone: +1-800-555-1234
+
+Customer Support Hours:
+Monday - Friday: 9 AM - 6 PM (EST)
+Saturday - Sunday: Closed
+
+How to Get Started:
+Customers can select a plan on our pricing page, submit their company info, and get a personalized AI bot tailored for their needs. We provide continuous support and updates.
+
+Common Questions:
+Q: How much can I save with your bots?
+A: Our clients typically save up to 30% on customer support costs while improving response times.
+
+Q: Can the bot handle multiple languages?
+A: Yes, we support English, Spanish, French, and more.
+
+Q: How long does setup take?
+A: Most bots are deployed within 1-2 weeks after receiving your details.
+
+---
+Website Navigation Guide – BotFriendly AI
+
+Main Website URL:
+- Homepage: http://192.168.100.26:5000/
+
+Navigation & Key Pages:
+
+1. Homepage
+   - Description: Intro to BotFriendly with company mission, call-to-action, and AI chatbot demo.
+   - "Explore Services" button: Takes users to the Services page.
+   - "View Plans" button: Opens the Pricing page with call-to-action section.
+   - Persistent chat bubble at bottom-right: Opens a mini chatbot popup.
+
+2. Services Page: http://192.168.100.26:5000/services
+   - Overview of all services including AI chatbots, automation agents that we still don t do, CRM integration, and analytics.
+   - Fully redesigned futuristic layout with cards.
+   - Scrollable and mobile-responsive.
+
+3. Pricing Page: http://192.168.100.26:5000/pricing
+   - Displays all available pricing plans: Free, Starter, Pro, and Enterprise.
+   - "Contact Sales" buttons link to the custom order form with the plan name passed in the URL.
+
+4. Order Page (Plan Submission): http://192.168.100.26:5000/order?plan=Pro
+   - Dynamic form page that shows selected plan.
+   - Required Fields: Name, Email, Message
+   - File upload field available for .txt or other bot-related data.
+   - On submit, you receive a confirmation email and the team is notified.
+
+5. Upload Bot Info Page: http://192.168.100.26:5000/bot-info-upload
+   - Companies can submit their website and upload a bot instruction file (.txt or similar).
+   - Required fields: Company Name, Website Link, File Upload
+   - Includes animated gradient background and confirmation after submission.
+
+
+7. Contact Info
+   - Located in the footer of most pages.
+   - Email: support@botfriendly.com
+   - Phone: +1-800-555-1234
+
+8. Chatbot Widget
+   - Fixed position on bottom-right of every page.
+   - Click to open an interactive popup for future AI assistance.
+   - Includes a large red "X" button to close and mobile responsiveness.
+
+
+Important Notes:
+- Always fill all required fields before submitting a form.
+- Email must be valid to receive confirmation and payment instructions.
+- For custom bot configuration, you must upload your website link and a bot instruction file.
+
+ automation agents are still not avaiable
