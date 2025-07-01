@@ -4,3 +4,4 @@ beautifulsoup4
 sentence-transformers
 chromadb
 google-generativeai
+gunicorn
