@@ -1,0 +1,187 @@
+/* General reset and base */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+    background-size: cover;
+    color: #ddd;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Dark overlay on background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+/* Futuristic Nav */
+.futuristic-nav {
+    border-bottom: 4px solid #4A5BFF;
+    backdrop-filter: saturate(180%) blur(20px);
+    background: rgba(10,10,30,0.6);
+    box-shadow: inset 0 0 15px #4A5BFF;
+    padding: 10px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.futuristic-nav img {
+    height: 50px;
+    filter: drop-shadow(0 0 3px #4A5BFF);
+}
+
+.futuristic-nav h1 {
+    color: #4A5BFF;
+    font-weight: 900;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+/* Hero Section */
+.hero {
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 140px 20px 80px 20px;
+    text-align: center;
+    color: #ddd;
+}
+
+.hero-content {
+    max-width: 700px;
+    backdrop-filter: brightness(1.3);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #4A5BFF;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    text-shadow: 0 0 6px #000;
+}
+
+.btn {
+    background: #4A5BFF;
+    color: white;
+    padding: 16px 36px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 12px;
+    box-shadow: 0 0 12px #4A5BFFaa;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #637BFF;
+    box-shadow: 0 0 20px #637BFFee;
+}
+
+/* Features Section */
+.features {
+    background: rgba(10, 10, 30, 0.75);
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: rgba(74, 91, 255, 0.15);
+    border: 1px solid #4A5BFF;
+    border-radius: 12px;
+    padding: 30px;
+    width: 280px;
+    box-shadow: 0 0 10px #4A5BFFaa;
+    text-align: center;
+    transition: transform 0.3s ease;
+    color: #ccc;
+}
+
+.feature:hover {
+    transform: translateY(-8px);
+    background: rgba(74, 91, 255, 0.3);
+    box-shadow: 0 0 25px #637BFFdd;
+}
+
+.feature h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #4A5BFF;
+}
+
+.feature p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* Motto Section */
+.motto {
+    background: rgba(10, 10, 30, 0.85);
+    text-align: center;
+    padding: 50px 20px;
+    color: #4A5BFF;
+    font-weight: 700;
+    font-size: 1.75rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    user-select: none;
+    text-shadow: 0 0 8px #637BFF;
+}
+
+.motto p {
+    margin-top: 15px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #bbb;
+    text-transform: none;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+    user-select: text;
+}
+
+/*
+
+/* Footer */
+footer {
+    background: #11132f;
+    color: #4A5BFF;
+    text-align: center;
+    padding: 20px 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    user-select: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 90%;
+    }
+}

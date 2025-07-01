@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Send Bot Info – BotFriendly</title>
+  <link rel="stylesheet" href="upload.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/upload.css') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+<main class="upload-wrapper">
+  <section class="upload-card">
+    <h1 id="gradient-title" class="gradient-sync">Send Your Bot Info</h1>
+    <p>Upload your file and company details so we can build your custom AI support agent.</p>
+
+    <form action="upload_handler.php" method="post" enctype="multipart/form-data">
+      <label for="company">Company Name</label>
+      <input type="text" id="company" name="name" required placeholder="Your Company Name" />
+
+      <label for="website">Company Website</label>
+      <input type="url" id="website" name="message" required placeholder="https://yourcompany.com" />
+
+      <label for="file">Upload .txt or .pdf File</label>
+      <input type="file" id="file" name="file" accept=".txt,.pdf" required />
+
+      <button type="submit" id="submit-btn" class="gradient-sync">Submit Info</button>
+    </form>
+  </section>
+</main>
+<script>
+  const button = document.getElementById("submit-btn");
+  const title = document.getElementById("gradient-title");
+
+  button.addEventListener("mouseenter", () => {
+    button.style.backgroundPosition = "100% 50%";
+    title.style.backgroundPosition = "100% 50%";
+  });
+
+  button.addEventListener("mouseleave", () => {
+    button.style.backgroundPosition = "0% 50%";
+    title.style.backgroundPosition = "0% 50%";
+  });
+</script>
+</body>
+</html>
