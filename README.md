@@ -1,1 +1,1 @@
-# Botfriendly
+# [Botfriendly](https://botfriedly.store/)
