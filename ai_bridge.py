@@ -6,7 +6,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 
 # === CONFIGURATION ===
-GOOGLE_API_KEY = "AIzaSyDbPcSEgZ81Crwgs0rUGDW_9fkbMgmF9p0"
+GOOGLE_API_KEY = "AIzaSyB7x3Th-3mYNygWC6FMrsqlXq8_GQq0hy0"
 WEBSITE_URLS = [
     "http://192.168.100.26:5000/"
 ]
@@ -15,7 +15,7 @@ CHUNK_SEPARATOR = "\n\n"
 
 # === SETUP ===
 genai.configure(api_key=GOOGLE_API_KEY)
-model = genai.GenerativeModel(model_name="gemini-1.5-flash")
+model = genai.GenerativeModel("gemini-2.5-flash-lite")
 knowledge_base = []
 already_initialized = False
 
@@ -113,4 +113,5 @@ def ask_bot(user_question: str) -> str:
 
     
     return getattr(response, "text", str(response)).strip()
+
 
