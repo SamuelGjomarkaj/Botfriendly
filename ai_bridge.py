@@ -111,5 +111,6 @@ def ask_bot(user_question: str) -> str:
         f"Agent:"
     )
 
-    response = model.generate_content(full_prompt)
+    
     return getattr(response, "text", str(response)).strip()
+
